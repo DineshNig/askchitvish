@@ -49,6 +49,8 @@ dependencies:
   animated_splash_screen: ^1.0.1+2
   flare_splash_screen: ^3.0.1
   html_unescape: 1.0.2
+  file: ^6.1.4
+  sqflite: ^2.2.4+1
 
 
 dev_dependencies:

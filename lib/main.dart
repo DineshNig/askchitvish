@@ -116,6 +116,7 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.red,
       ),
       home: Splash4(),
+      // home: new CategoryView(),
       debugShowCheckedModeBanner: false,
     );
   }

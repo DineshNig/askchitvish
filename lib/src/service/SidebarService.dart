@@ -48,7 +48,7 @@ class SideBarService {
           'askchitvish/androadmin/recentlist_ios.php', queryParam);
     }
     // print(uri);
-    final response = await http.get(uri);
+    final response = await http.get(uri,  headers: {"Content-Type": "application/json"},);
 
     List<SubCategoryModel> subcategorylist =
         allSubCategoryFromJson(response.body);
@@ -63,7 +63,7 @@ class SideBarService {
       uri = 'http://askchitvish.com/askchitvish/androadmin/newrecipe_ios.php';
     }
 
-    final response = await http.get(uri);
+    final response = await http.get(uri, headers: {"Content-Type": "application/json"});
 
     return response.body;
   }
@@ -76,7 +76,7 @@ class SideBarService {
       uri = 'http://askchitvish.com/askchitvish/androadmin/aac_ios.php';
     }
 
-    final response = await http.get(uri);
+    final response = await http.get(uri,headers: {"Content-Type": "application/json"});
 
     return response.body;
   }
@@ -92,7 +92,7 @@ class SideBarService {
       url = 'http://askchitvish.com/askchitvish/androadmin/recme_ios.php';
     }
 
-    var response = await http.post(url, body: {'uid': uid, 'sid': sid});
+    var response = await http.post(url, body: {'uid': uid, 'sid': sid}, headers: {"Content-Type": "application/json"});
     // print('Response status: ${response.statusCode}');
     // print('Response body: ${response.body}');
   }
